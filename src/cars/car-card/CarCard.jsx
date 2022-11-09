@@ -2,18 +2,22 @@ import './CarCard.scss';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { useNavigate } from 'react-router';
+import { useState } from "react";
+
 
 export function CarCard({ car, onDelete }) {
   
+  const [backgrnd, setBackground] = useState('');
   const navigate = useNavigate();
-
-  const onDeleteClicked = () =>{
-    onDelete(car.id)
+  const  onDeleteClicked = async () =>{
+    setBackground ('red');
+    await onDelete(car.id);
+    setBackground ('');
   }
     return (
-      <Card className="card" style={{ width: '18rem', marginleft: '10px'}}>
+      <Card className="card" style={{margin: '5px',borderColor:backgrnd}}>
         <Card.Img variant="top" src={car.picture} />
-        <Card.Body>
+        <Card.Body style={{background:backgrnd}}>
           <Card.Title>{car.brand} {car.model}</Card.Title>
           <Card.Text>
             Fuel type: {car.fuel}
