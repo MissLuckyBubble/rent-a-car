@@ -1,10 +1,25 @@
 {
-  "users": [],
+  "users": [
+    {
+      "id":1,
+      "firstName":"Silvia",
+      "lastName":"Dancheva",
+      "email":"sd@email.com",
+      "phoneN":"0895"
+    },
+    {
+      "id":2,
+      "firstName":"Mariq",
+      "lastName":"Marinova",
+      "email":"MM@email.com",
+      "phoneN":"0895777"
+    }
+  ],
   "cars": [
     {
       "id": 1,
       "type": "economy",
-      "brand": "audi",
+      "brand": "Audi",
       "model": "a3",
       "year": "2003",
       "fuel": "petrol",
@@ -14,17 +29,42 @@
       "picture": "https://automedia.investor.bg/media/files/resized/gallery/760x/489/19d89fb09f29973b712c4a0807a44489-big1178528337_1785_2.jpg"
     },
     {
-      "type": "",
+      "type": "economy",
       "brand": "Audi",
       "model": "A3 ",
       "year": "2022",
-      "fuel": "",
+      "fuel": "petrol",
       "seats": "5",
       "picture": "https://www.motortrend.com/uploads/2022/07/2022-Audi-A3-001.jpg?fit=around%7C875:492",
       "price": "50",
       "count": "2",
       "photo": "https://thumbs.dreamstime.com/b/no-image-available-icon-photo-camera-flat-vector-illustration-132483141.jpg",
-      "id": 2    }
+      "id": 2
+    },
+    {
+      "type": "economy",
+      "brand": "Audi",
+      "model": "a",
+      "year": "2022",
+      "fuel": "petrol",
+      "seats": "1",
+      "picture": "https://cdn.audi.bg/media/Theme_Menu_Model_Dropdown_Item_Image_Component/root-bg-model-modelMenu-editableItems-20021-dropdown-386515-image/dh-487-a0e9a6/49141985/1657267463/audi-a3-limousine-tfsi.jpg",
+      "price": "1",
+      "count": "1",
+      "id": 3
+    },
+    {
+      "type": "SUV",
+      "brand": "a",
+      "model": "a",
+      "year": "2000",
+      "fuel": "hybrid",
+      "seats": "1",
+      "picture": "https://thumbs.dreamstime.com/b/no-image-available-icon-photo-camera-flat-vector-illustration-132483141.jpg",
+      "price": "1",
+      "count": "1",
+      "id": 4
+    }
   ],
   "rentals": []
 }
