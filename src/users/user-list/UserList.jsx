@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { deleteUser, getAllUsers } from "../../utils/services/user-http-utils";
-import Table from 'react-bootstrap/Table';
+import { deleteUser, getAllUsers, saveUser } from "../../utils/services/user-http-utils";
+import { Table, Button } from 'react-bootstrap';
 import { UserCard } from "../user-card/UserCard";
 import { confirm } from 'react-bootstrap-confirmation';
+import UserForm from "../user-form/UserForm";
 export function UsersList() {
 
     const [users, setUsers] = useState([]);
@@ -24,15 +25,21 @@ export function UsersList() {
         }
 
     }
+    const onEdit = (user) => {
+        <UserForm handleShow></UserForm>
+    }
 
     return (
         <Table striped bordered hover>
+
             <thead>
                 <tr>
                     <th>Full Name</th>
                     <th>Email</th>
                     <th>Phone №</th>
-                    <th> </th>
+                    <th>
+                        <UserForm />
+                    </th>
                 </tr>
             </thead>
             <tbody>

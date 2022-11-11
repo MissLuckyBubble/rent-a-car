@@ -1,18 +1,25 @@
 {
   "users": [
     {
-      "id":1,
-      "firstName":"Silvia",
-      "lastName":"Dancheva",
-      "email":"sd@email.com",
-      "phoneN":"0895"
+      "id": 1,
+      "firstName": "Silvia",
+      "lastName": "Dancheva",
+      "email": "sd@email.com",
+      "phoneN": "0895"
     },
     {
-      "id":2,
-      "firstName":"Mariq",
-      "lastName":"Marinova",
-      "email":"MM@email.com",
-      "phoneN":"0895777"
+      "id": 2,
+      "firstName": "Mariq",
+      "lastName": "Marinova",
+      "email": "MM@email.com",
+      "phoneN": "0895777"
+    },
+    {
+      "firstName": "Hristo",
+      "lastName": "Mar",
+      "email": "hm@abv.bg",
+      "phoneN": "0877",
+      "id": 3
     }
   ],
   "cars": [
