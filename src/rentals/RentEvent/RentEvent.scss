@@ -1,0 +1,26 @@
+.suggestions{
+    cursor:pointer;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom:1px solid black;
+    border-radius: 5px;
+}
+
+.suggestions:hover{
+    background-color: rgb(174, 227, 174);
+}
+
+.pricing{
+    display: inline-flex;
+    /* float: right; */
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 1.5rem;
+}
+.red{
+    color:rgba(226, 31, 31, 0.984)
+}
+.total{
+    font-size: 2rem;
+    border-top: 1px solid black;
+}

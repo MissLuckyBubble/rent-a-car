@@ -12,11 +12,27 @@ export function CarCard({ car, onDelete }) {
   const navigateToUpdate = () => {
     navigate(`/cars/edit/${car.id}`);
   }
+  const navigateToRent = () => {
+    navigate(`/rentals/new/${car.id}`)
+  }
 
   const onDeleteClicked = async () => {
     setBackground('red');
     await onDelete(car.id);
     setBackground('');
+  }
+
+  const renderActionButtons = () => {
+
+    if (onDelete) {
+      return <>
+        <Card.Body>
+          <Card.Link onClick={navigateToRent}>Rent</Card.Link>
+          <Card.Link onClick={navigateToUpdate}>Edit</Card.Link>
+          <Card.Link onClick={onDeleteClicked}>Delete</Card.Link>
+        </Card.Body>
+      </>
+    }
   }
 
   return (
@@ -37,11 +53,8 @@ export function CarCard({ car, onDelete }) {
         <ListGroup.Item>Price per day: {car.price}$ </ListGroup.Item>
         <ListGroup.Item>Number of avaailable vehicles: {car.count}</ListGroup.Item>
       </ListGroup>
-      <Card.Body>
-        <Card.Link>Rent</Card.Link>
-        <Card.Link onClick={navigateToUpdate}>Edit</Card.Link>
-        <Card.Link onClick={onDeleteClicked}>Delete</Card.Link>
-      </Card.Body>
+      {renderActionButtons()}
     </Card>
   );
+
 }
